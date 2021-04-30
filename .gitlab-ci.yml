@@ -8,3 +8,7 @@ deploy:
   script:
     - yarn install
     - firebase deploy --token $FIREBASE_TOKEN
+
+  only:
+    refs:
+      - main
