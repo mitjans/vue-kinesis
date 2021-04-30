@@ -4,5 +4,7 @@ before_script:
   - yarn global add firebase-tools
 
 deploy:
-  - yarn install
-  - firebase deploy --token $FIREBASE_TOKEN
+  stage: deploy
+  script:
+    - yarn install
+    - firebase deploy --token $FIREBASE_TOKEN
