@@ -1,0 +1,20 @@
+{
+  "files.insertFinalNewline": true,
+  "jest.debugCodeLens.showWhenTestStateIn": [
+    "fail",
+    "pass",
+    "unknown"
+  ],
+  "eslint.packageManager": "yarn",
+  "editor.defaultFormatter": null,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "eslint.validate": true,
+    "source.fixAll.markdownlint": true
+  },
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "vetur.format.enable": false,
+  "vetur.completion.tagCasing": "initial"
+}

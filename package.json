@@ -1,0 +1,32 @@
+{
+  "name": "cmitjans.com",
+  "version": "1.0.0",
+  "description": "Official cmitjans.com repository",
+  "author": "Carles Mitjans",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build:development": "webpack build --mode development",
+    "build:production": "webpack build --mode production",
+    "serve": "webpack serve --mode development --stats=errors-only"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "@vue/compiler-sfc": "^3.0.11",
+    "eslint": "^7.25.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.9.0",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^26.6.3",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "vue": "^3.0.11",
+    "vue-loader": "^16.2.0",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
