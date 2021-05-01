@@ -50,6 +50,7 @@ module.exports = {
   ],
   resolve: {
     alias: {
+      '@managers': `${__dirname}/managers`,
       '@assets': `${__dirname}/assets`,
     },
     extensions: ['.js', '.ts', '.vue'],

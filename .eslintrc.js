@@ -17,8 +17,8 @@ module.exports = {
       alias: {
         map: [
           [
-            '@components',
-            './src/components',
+            '@managers',
+            './src/managers',
           ],
           [
             '@assets',
