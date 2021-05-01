@@ -12,6 +12,7 @@
     "deploy": "yarn build:production && firebase deploy --token $FIREBASE_TOKEN"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.1.1",
     "vue": "^3.0.11"
   },
   "devDependencies": {
