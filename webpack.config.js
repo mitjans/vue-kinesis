@@ -28,6 +28,14 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
       {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      },
+      {
         test: /\.svg$/,
         use: [
           'vue-loader',
@@ -50,7 +58,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@managers': `${__dirname}/managers`,
+      '@managers': `${__dirname}/src/managers`,
+      '@components': `${__dirname}/src/components`,
       '@assets': `${__dirname}/assets`,
     },
     extensions: ['.js', '.ts', '.vue'],

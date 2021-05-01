@@ -1,14 +1,16 @@
 <template>
   <div id="container">
-    <div id="under-construction">
-      Under construction...
-    </div>
+    <UnderConstruction />
   </div>
 </template>
 
 <script lang="ts">
-export default {
+import UnderConstruction from '@components/under_construction.vue';
 
+export default {
+  components: {
+    UnderConstruction,
+  },
 };
 </script>
 

@@ -16,7 +16,6 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "vetur.format.enable": false,
-  "vetur.completion.tagCasing": "initial",
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,

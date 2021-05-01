@@ -21,6 +21,10 @@ module.exports = {
             './src/managers',
           ],
           [
+            '@components',
+            './src/components',
+          ],
+          [
             '@assets',
             './assets',
           ],
