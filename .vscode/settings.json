@@ -18,5 +18,8 @@
   "vetur.format.enable": false,
   "vetur.completion.tagCasing": "initial",
   "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
   "stylelint.enable": true,
+  "vetur.validation.style": false,
 }

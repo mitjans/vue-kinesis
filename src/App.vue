@@ -1,6 +1,6 @@
 <template>
-  <div class="h-screen w-screen">
-    <div class="text-5xl font-extrabold p-5">
+  <div id="container">
+    <div id="under-construction">
       Under construction...
     </div>
   </div>
@@ -11,3 +11,15 @@ export default {
 
 };
 </script>
+
+<style>
+#container {
+  @apply h-screen w-screen;
+}
+
+#under-construction {
+  @apply text-5xl;
+  @apply font-extrabold;
+  @apply p-5;
+}
+</style>
