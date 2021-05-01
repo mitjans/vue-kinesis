@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "cmitjans-com",
     "public": "dist",
     "ignore": [
       "firebase.json",
