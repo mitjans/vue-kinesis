@@ -24,6 +24,10 @@ module.exports = {
         loader: 'vue-loader',
       },
       {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
+      {
         test: /\.svg$/,
         use: [
           'vue-loader',
@@ -45,6 +49,9 @@ module.exports = {
     }),
   ],
   resolve: {
+    alias: {
+      '@assets': `${__dirname}/assets`,
+    },
     extensions: ['.js', '.ts', '.vue'],
   },
 };

@@ -16,5 +16,7 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "vetur.format.enable": false,
-  "vetur.completion.tagCasing": "initial"
+  "vetur.completion.tagCasing": "initial",
+  "css.validate": false,
+  "stylelint.enable": true,
 }
