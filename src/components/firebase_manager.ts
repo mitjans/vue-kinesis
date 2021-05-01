@@ -14,5 +14,6 @@ const firebaseConfig = {
 export default class FirebaseManager {
   public initializeApp = () => {
     firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
   }
 }
