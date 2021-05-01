@@ -21,16 +21,8 @@ module.exports = {
             './src/components',
           ],
           [
-            '@resources',
-            './resources',
-          ],
-          [
-            '@internal_connector',
-            '../internal_connector/src',
-          ],
-          [
-            '@domain',
-            './src/domain',
+            '@assets',
+            './assets',
           ],
         ],
         extensions: [
