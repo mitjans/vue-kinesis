@@ -5,6 +5,7 @@
       id="under-construction_image"
       src="@assets/images/under_construction.jpg"
     >
+    <h2>By Carles Mitjans</h2>
   </div>
 </template>
 
