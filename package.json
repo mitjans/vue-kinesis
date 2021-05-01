@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@headlessui/vue": "^1.1.1",
+    "@heroicons/vue": "^1.0.1",
     "vue": "^3.0.11"
   },
   "devDependencies": {
-    "@heroicons/vue": "^1.0.1",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "@vue/compiler-sfc": "^3.0.11",
