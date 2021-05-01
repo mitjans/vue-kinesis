@@ -12,7 +12,8 @@
     "deploy": "yarn build:production && firebase deploy --token $FIREBASE_TOKEN"
   },
   "dependencies": {
-    "vue": "^3.0.11"
+    "vue": "^3.0.11",
+    "firebase": "^8.4.3"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",
