@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "octref.vetur",
+    "dbaeumer.vscode-eslint"
+  ]
+}
