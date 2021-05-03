@@ -90,7 +90,7 @@ export default {
 }
 
 .fade-enter-active {
-  @apply transition-all duration-300 delay-300 ease-linear;
+  @apply transition-all duration-100 delay-100 ease-linear;
 }
 
 .fade-leave-active {

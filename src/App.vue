@@ -1,24 +1,24 @@
 <template>
   <div id="container">
     <NavBar />
-    <div
+    <MainContent
       id="content"
       :class="{
         scrolling
       }"
-    >
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quam accusantium, saepe eius cum tempore quod nisi tempora facilis quasi, delectus ratione distinctio laborum maiores molestiae obcaecati dolor, modi excepturi.
-    </div>
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { ref } from 'vue';
 import NavBar from '@components/navbar/navbar.vue';
+import MainContent from '@components/web_content/main_content.vue';
 
 export default {
   components: {
     NavBar,
+    MainContent,
   },
   setup() {
     const scrolling = ref(false);
@@ -38,8 +38,7 @@ export default {
 }
 
 #content {
-  @apply transition-all duration-500 w-80 pt-96 m-20;
-  height: 1200px;
+  @apply transition-all duration-500 pt-96;
 }
 
 #content.scrolling {

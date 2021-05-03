@@ -126,7 +126,7 @@ export default {
 }
 
 #link-container {
-  @apply flex space-x-2 items-center text-xl;
+  @apply flex space-x-4 items-center text-xl;
 }
 
 #link-container a {
