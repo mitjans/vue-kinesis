@@ -1,13 +1,13 @@
 <template>
   <div
-    id="topbar-container"
+    id="navbar-container"
     :class="{
       'full-screen': fullScreen,
       scrolling: !fullScreen && scrolling
     }"
   >
     <TransitionRoot
-      id="topbar-welcome"
+      id="navbar-welcome"
       :show="fullScreen"
       appear
       enter="transition-opacity duration-1000"
@@ -21,14 +21,14 @@
 
     <div
       v-if="!fullScreen && !scrolling"
-      id="topbar-content"
+      id="navbar-content"
     >
       <DefaultContent />
     </div>
 
     <div
       v-if="!fullScreen && scrolling"
-      id="topbar-content"
+      id="navbar-content"
     >
       <ScrollingContent />
     </div>
@@ -69,23 +69,23 @@ export default {
 </script>
 
 <style>
-#topbar-container {
+#navbar-container {
   @apply transition-all duration-500 top-0 fixed ease-in-out h-96 w-full bg-indigo-500 flex flex-col justify-center;
 }
 
-#topbar-container.scrolling {
+#navbar-container.scrolling {
   @apply h-14 bg-opacity-80 backdrop-filter backdrop-blur-md;
 }
 
-#topbar-container.full-screen {
+#navbar-container.full-screen {
   @apply h-full;
 }
 
-#topbar-welcome {
+#navbar-welcome {
   @apply absolute transition-all duration-1000 flex flex-col w-full space-y-4;
 }
 
-#topbar-welcome h1 {
+#navbar-welcome h1 {
   @apply text-5xl font-bold text-white text-center;
 }
 </style>
