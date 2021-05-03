@@ -34,7 +34,7 @@ export default {
 
 <style>
 #container {
-  @apply h-screen w-screen;
+  @apply h-screen;
 }
 
 #content {
