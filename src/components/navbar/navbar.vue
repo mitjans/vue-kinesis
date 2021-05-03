@@ -1,0 +1,91 @@
+<template>
+  <div
+    id="topbar-container"
+    :class="{
+      'full-screen': fullScreen,
+      scrolling: !fullScreen && scrolling
+    }"
+  >
+    <TransitionRoot
+      id="topbar-welcome"
+      :show="fullScreen"
+      appear
+      enter="transition-opacity duration-1000"
+      enter-from="opacity-0"
+      leave="transition-opacity duration-1000"
+      leave-to="opacity-0"
+    >
+      <h1>Hello</h1>
+      <h1>Stranger</h1>
+    </TransitionRoot>
+
+    <div
+      v-if="!fullScreen && !scrolling"
+      id="topbar-content"
+    >
+      <DefaultContent />
+    </div>
+
+    <div
+      v-if="!fullScreen && scrolling"
+      id="topbar-content"
+    >
+      <ScrollingContent />
+    </div>
+  </div>
+</template>
+
+<script>
+import { ref } from 'vue';
+import { TransitionRoot } from '@headlessui/vue';
+import DefaultContent from '@components/navbar/default_content.vue';
+import ScrollingContent from '@components/navbar/scrolling_content.vue';
+
+export default {
+  components: {
+    TransitionRoot,
+    DefaultContent,
+    ScrollingContent,
+  },
+  setup() {
+    const fullScreen = ref(true);
+
+    setTimeout(() => {
+      fullScreen.value = false;
+    }, 2000);
+
+    const scrolling = ref(false);
+    document.addEventListener('scroll', () => {
+      scrolling.value = window.scrollY > 0;
+    });
+
+    return {
+      fullScreen,
+      scrolling,
+    };
+  },
+
+};
+</script>
+
+<style>
+#topbar-container {
+  @apply transition-all duration-500 top-0 fixed ease-in-out h-96 w-full bg-indigo-500 flex flex-col justify-center;
+}
+
+#topbar-container.scrolling {
+  @apply h-14 bg-opacity-80 backdrop-filter backdrop-blur-md;
+}
+
+#topbar-container.full-screen {
+  @apply h-full;
+}
+
+#topbar-welcome {
+  @apply absolute transition-all duration-1000 flex flex-col w-full space-y-4;
+}
+
+#topbar-welcome h1 {
+  @apply text-5xl font-bold text-white text-center;
+}
+</style>

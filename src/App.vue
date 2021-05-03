@@ -1,15 +1,33 @@
 <template>
   <div id="container">
-    <UnderConstruction />
+    <NavBar />
+    <div
+      id="content"
+      :class="{
+        scrolling: !fullScreen && scrolling
+      }"
+    >
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quam accusantium, saepe eius cum tempore quod nisi tempora facilis quasi, delectus ratione distinctio laborum maiores molestiae obcaecati dolor, modi excepturi.
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import UnderConstruction from '@components/under_construction.vue';
+import { ref } from 'vue';
+import NavBar from '@components/navbar/navbar.vue';
 
 export default {
   components: {
-    UnderConstruction,
+    NavBar,
+  },
+  setup() {
+    const scrolling = ref(false);
+    document.addEventListener('scroll', () => {
+      scrolling.value = window.scrollY > 0;
+    });
+    return {
+      scrolling,
+    };
   },
 };
 </script>
@@ -19,9 +37,12 @@ export default {
   @apply h-screen w-screen;
 }
 
-#under-construction {
-  @apply text-5xl;
-  @apply font-extrabold;
-  @apply p-5;
+#content {
+  @apply transition-all duration-500 w-80 pt-96 m-20;
+  height: 1200px;
+}
+
+#content.scrolling {
+  @apply pt-14;
 }
 </style>
