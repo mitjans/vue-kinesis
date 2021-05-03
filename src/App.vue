@@ -4,7 +4,7 @@
     <div
       id="content"
       :class="{
-        scrolling: !fullScreen && scrolling
+        scrolling
       }"
     >
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus quam accusantium, saepe eius cum tempore quod nisi tempora facilis quasi, delectus ratione distinctio laborum maiores molestiae obcaecati dolor, modi excepturi.
