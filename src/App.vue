@@ -1,15 +1,33 @@
 <template>
   <div id="container">
-    <UnderConstruction />
+    <NavBar />
+    <MainContent
+      id="content"
+      :class="{
+        scrolling
+      }"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import UnderConstruction from '@components/under_construction.vue';
+import { ref } from 'vue';
+import NavBar from '@components/navbar/navbar.vue';
+import MainContent from '@components/web_content/main_content.vue';
 
 export default {
   components: {
-    UnderConstruction,
+    NavBar,
+    MainContent,
+  },
+  setup() {
+    const scrolling = ref(false);
+    document.addEventListener('scroll', () => {
+      scrolling.value = window.scrollY > 0;
+    });
+    return {
+      scrolling,
+    };
   },
 };
 </script>
@@ -19,9 +37,11 @@ export default {
   @apply h-screen w-screen;
 }
 
-#under-construction {
-  @apply text-5xl;
-  @apply font-extrabold;
-  @apply p-5;
+#content {
+  @apply transition-all duration-500 pt-96;
+}
+
+#content.scrolling {
+  @apply pt-14;
 }
 </style>
