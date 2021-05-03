@@ -23,6 +23,10 @@ export default {
   setup() {
     const scrolling = ref(false);
 
+    document.addEventListener('scroll', () => {
+      scrolling.value = window.pageYOffset > 0;
+    });
+
     document.addEventListener('wheel', (event) => {
       if (event.deltaY > 0) {
         scrolling.value = true;
