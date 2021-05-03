@@ -22,9 +22,15 @@ export default {
   },
   setup() {
     const scrolling = ref(false);
-    document.addEventListener('scroll', () => {
-      scrolling.value = window.scrollY > 0;
+
+    document.addEventListener('wheel', (event) => {
+      if (event.deltaY > 0) {
+        scrolling.value = true;
+      } else if (window.pageYOffset === 0) {
+        scrolling.value = false;
+      }
     });
+
     return {
       scrolling,
     };
