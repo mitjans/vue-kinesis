@@ -47,6 +47,12 @@ export default {
     DefaultContent,
     ScrollingContent,
   },
+  props: {
+    scrolling: {
+      type: Boolean,
+      required: true,
+    },
+  },
   setup() {
     const fullScreen = ref(true);
 
@@ -54,14 +60,8 @@ export default {
       fullScreen.value = false;
     }, 2000);
 
-    const scrolling = ref(false);
-    document.addEventListener('scroll', () => {
-      scrolling.value = window.scrollY > 0;
-    });
-
     return {
       fullScreen,
-      scrolling,
     };
   },
 

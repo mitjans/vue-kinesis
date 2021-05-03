@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <NavBar />
+    <NavBar :scrolling="scrolling" />
     <MainContent
       id="content"
       :class="{
