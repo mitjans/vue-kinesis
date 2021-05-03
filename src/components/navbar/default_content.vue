@@ -5,15 +5,20 @@
       src="@assets/images/profile.jpeg"
     >
     <div id="profile-info">
-      <h1>Carles Mitjans Coma</h1>
-      <h2>Software Engineer</h2>
+      <div id="name-container">
+        <h1>Carles Mitjans Coma</h1>
+        <h2>Software Engineer</h2>
+      </div>
       <div id="email-container">
-        <MailIcon
-          id="mail-icon"
-          size="0.5x"
-        />
+        <FontAwesomeIcon icon="envelope" />
         <a href="mailto:mitjans.coma@gmail.com">
           mitjans.coma@gmail.com
+        </a>
+      </div>
+      <div id="phone-container">
+        <FontAwesomeIcon icon="phone" />
+        <a href="tel:+34690136640">
+          +34 690 136 640
         </a>
       </div>
     </div>
@@ -21,18 +26,13 @@
 </template>
 
 <script>
-import { MailIcon } from '@heroicons/vue/solid';
-
 export default {
-  components: {
-    MailIcon,
-  },
 };
 </script>
 
 <style>
 #navbar-default-content {
-  @apply flex space-x-10 items-center pl-20 pr-20;
+  @apply flex space-x-10 items-center pl-16 pr-16;
 }
 
 #profile-image {
@@ -40,7 +40,7 @@ export default {
 }
 
 #profile-info {
-  @apply flex flex-col space-y-2 text-white;
+  @apply flex flex-col space-y-5 text-white;
 }
 
 #profile-info h1 {
@@ -51,15 +51,19 @@ export default {
   @apply text-2xl font-semibold;
 }
 
-#email-container {
-  @apply flex space-x-2;
+#name-container {
+  @apply flex flex-col space-y-2;
+}
+
+#email-container, #phone-container {
+  @apply flex items-center space-x-2;
 }
 
 #mail-icon {
   @apply inline-flex;
 }
 
-#email-container a {
+#email-container, #phone-container a {
   @apply text-xl underline;
 }
 </style>

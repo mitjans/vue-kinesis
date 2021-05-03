@@ -12,8 +12,11 @@
     "deploy": "yarn build:production && firebase deploy --token $FIREBASE_TOKEN"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^3.0.0-3",
     "@headlessui/vue": "^1.1.1",
-    "@heroicons/vue": "^1.0.1",
     "firebase": "^8.4.3",
     "tailwindcss": "^2.1.2",
     "vue": "^3.0.11"
