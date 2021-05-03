@@ -16,7 +16,7 @@ export default {
 #main-content {
   @apply flex justify-center items-center;
 
-  height: 10000px;
+  height: 930px;
 }
 
 #main-content p {
