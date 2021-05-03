@@ -19,19 +19,19 @@
       <h1>Stranger</h1>
     </TransitionRoot>
 
-    <div
-      v-if="!fullScreen && !scrolling"
-      id="navbar-content"
+    <transition
+      name="fade"
+      class="absolute"
     >
-      <DefaultContent />
-    </div>
+      <DefaultContent v-if="!fullScreen && !scrolling" />
+    </transition>
 
-    <div
-      v-if="!fullScreen && scrolling"
-      id="navbar-content"
+    <transition
+      name="fade"
+      class="absolute"
     >
-      <ScrollingContent />
-    </div>
+      <ScrollingContent v-if="!fullScreen && scrolling" />
+    </transition>
   </div>
 </template>
 
@@ -88,4 +88,18 @@ export default {
 #navbar-welcome h1 {
   @apply text-5xl font-bold text-white text-center;
 }
+
+.fade-enter-active {
+  @apply transition-all duration-300 delay-300 ease-linear;
+}
+
+.fade-leave-active {
+  @apply transition-all;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 </style>
