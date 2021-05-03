@@ -1,24 +1,78 @@
 <template>
   <div id="navbar-default-content">
-    <img
-      id="profile-image"
-      src="@assets/images/profile.jpeg"
-    >
-    <div id="profile-info">
-      <div id="name-container">
-        <h1>Carles Mitjans Coma</h1>
-        <h2>Software Engineer</h2>
+    <div id="left-container">
+      <img
+        id="profile-image"
+        src="@assets/images/profile.jpeg"
+      >
+      <div id="profile-info">
+        <div id="name-container">
+          <h1>Carles Mitjans Coma</h1>
+          <h2>Software Engineer</h2>
+        </div>
+        <div id="email-container">
+          <FontAwesome icon="envelope" />
+          <a
+            href="mailto:mitjans.coma@gmail.com"
+            target="_blank"
+          >
+            mitjans.coma@gmail.com
+          </a>
+        </div>
+        <div id="phone-container">
+          <FontAwesome icon="phone" />
+          <a
+            href="tel:+34690136640"
+            target="_blank"
+          >
+            +34 690 136 640
+          </a>
+        </div>
       </div>
-      <div id="email-container">
-        <FontAwesomeIcon icon="envelope" />
-        <a href="mailto:mitjans.coma@gmail.com">
-          mitjans.coma@gmail.com
+    </div>
+    <div id="right-container">
+      <div id="link-container">
+        <FontAwesome
+          :icon="['fab', 'linkedin']"
+        />
+        <a
+          href="https://linkedin.com/in/cmitjans"
+          target="_blank"
+        >
+          linkedin.com/in/cmitjans
         </a>
       </div>
-      <div id="phone-container">
-        <FontAwesomeIcon icon="phone" />
-        <a href="tel:+34690136640">
-          +34 690 136 640
+      <div id="link-container">
+        <FontAwesome
+          :icon="['fab', 'gitlab']"
+        />
+        <a
+          href="https://gitlab.com/cmitjans"
+          target="_blank"
+        >
+          gitlab.com/cmitjans
+        </a>
+      </div>
+      <div id="link-container">
+        <FontAwesome
+          :icon="['fab', 'github']"
+        />
+        <a
+          href="https://github.com/mitjans"
+          target="_blank"
+        >
+          github.com/mitjans
+        </a>
+      </div>
+      <div id="link-container">
+        <FontAwesome
+          :icon="['fab', 'stack-overflow']"
+        />
+        <a
+          href="https://stackoverflow.com/u/2148023"
+          target="_blank"
+        >
+          stackoverflow.com/u/2148023
         </a>
       </div>
     </div>
@@ -32,7 +86,11 @@ export default {
 
 <style>
 #navbar-default-content {
-  @apply flex space-x-10 items-center pl-16 pr-16;
+  @apply flex justify-between items-center pl-16 pr-16;
+}
+
+#left-container {
+  @apply flex space-x-10 items-center;
 }
 
 #profile-image {
@@ -56,14 +114,23 @@ export default {
 }
 
 #email-container, #phone-container {
-  @apply flex items-center space-x-2;
-}
-
-#mail-icon {
-  @apply inline-flex;
+  @apply flex items-center space-x-2 text-xl;
 }
 
 #email-container, #phone-container a {
-  @apply text-xl underline;
+  @apply underline;
 }
+
+#right-container {
+  @apply flex flex-col space-y-4 text-white;
+}
+
+#link-container {
+  @apply flex space-x-2 items-center text-xl;
+}
+
+#link-container a {
+  @apply underline;
+}
+
 </style>

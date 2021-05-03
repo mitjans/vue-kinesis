@@ -21,14 +21,14 @@
 
     <transition
       name="fade"
-      class="absolute"
+      class="absolute left-0 right-0"
     >
       <DefaultContent v-if="!fullScreen && !scrolling" />
     </transition>
 
     <transition
       name="fade"
-      class="absolute"
+      class="absolute left-0 right-0"
     >
       <ScrollingContent v-if="!fullScreen && scrolling" />
     </transition>
