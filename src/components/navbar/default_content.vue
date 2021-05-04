@@ -19,15 +19,6 @@
             mitjans.coma@gmail.com
           </a>
         </div>
-        <div id="phone-container">
-          <FontAwesome icon="phone" />
-          <a
-            href="tel:+34690136640"
-            target="_blank"
-          >
-            +34 690 136 640
-          </a>
-        </div>
       </div>
     </div>
     <div id="right-container">
@@ -113,11 +104,11 @@ export default {
   @apply flex flex-col space-y-2;
 }
 
-#email-container, #phone-container {
+#email-container {
   @apply flex items-center space-x-2 text-xl;
 }
 
-#email-container, #phone-container a {
+#email-container a {
   @apply underline;
 }
 
