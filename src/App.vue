@@ -23,12 +23,8 @@ export default {
   setup() {
     const scrolling = ref(false);
 
-    document.addEventListener('wheel', (event) => {
-      if (event.deltaY > 0) {
-        scrolling.value = true;
-      } else if (window.pageYOffset === 0) {
-        scrolling.value = false;
-      }
+    document.addEventListener('scroll', () => {
+      scrolling.value = window.pageYOffset > 0;
     });
 
     return {
@@ -45,6 +41,7 @@ export default {
 
 #content {
   @apply transition-all duration-500 pt-96;
+  height: 1100px;
 }
 
 #content.scrolling {

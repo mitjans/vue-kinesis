@@ -14,9 +14,7 @@ export default {
 
 <style>
 #main-content {
-  @apply flex justify-center items-center;
-
-  height: 930px;
+  @apply h-full flex justify-center items-center;
 }
 
 #main-content p {
