@@ -41,7 +41,6 @@ export default {
 
 #content {
   @apply transition-all duration-500 pt-96;
-  height: 1100px;
 }
 
 #content.scrolling {
