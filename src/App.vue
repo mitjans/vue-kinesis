@@ -1,12 +1,14 @@
 <template>
   <div id="container">
     <NavBar :scrolling="scrolling" />
-    <MainContent
-      id="content"
+    <div
+      id="main-content-container"
       :class="{
         scrolling
       }"
-    />
+    >
+      <MainContent />
+    </div>
   </div>
 </template>
 
@@ -39,11 +41,11 @@ export default {
   @apply h-screen;
 }
 
-#content {
+#main-content-container {
   @apply transition-all duration-500 pt-96;
 }
 
-#content.scrolling {
+#main-content-container.scrolling {
   @apply pt-14;
 }
 </style>

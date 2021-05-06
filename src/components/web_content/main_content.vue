@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div id="main-content">
-      <p>Stay tuned!</p>
-    </div>
+  <div id="main-content">
+    <p>Stay tuned!</p>
   </div>
 </template>
 
@@ -14,7 +12,7 @@ export default {
 
 <style>
 #main-content {
-  @apply h-full flex justify-center items-center;
+  @apply flex justify-center items-center;
 }
 
 #main-content p {
