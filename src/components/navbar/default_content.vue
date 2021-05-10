@@ -10,6 +10,13 @@
           <h1>Carles Mitjans Coma</h1>
           <h2>Software Engineer</h2>
         </div>
+        <div id="description-container">
+          Self-taugh tech enthusiast
+          <br>
+          Bioinformatistician (Biology / Informatics / Statistics)
+          <br>
+          Nature 🏔
+        </div>
         <div id="email-container">
           <FontAwesome icon="envelope" />
           <a
@@ -102,6 +109,10 @@ export default {
 
 #name-container {
   @apply flex flex-col space-y-2;
+}
+
+#description-container {
+  @apply text-xl;
 }
 
 #email-container {
